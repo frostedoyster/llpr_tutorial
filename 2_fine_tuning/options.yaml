@@ -1,0 +1,23 @@
+seed: 42
+
+architecture:
+  name: pet
+  training:
+    finetune:
+      read_from: pet-mad-v1.0.2.ckpt
+      method: full
+    learning_rate: 2e-5
+    batch_size: 10
+    num_epochs: 100
+
+training_set:
+  systems:
+    read_from: dataset.xyz
+    length_unit: angstrom
+  targets:
+    energy:
+      key: energy
+      unit: eV
+
+validation_set: 0.1
+test_set: 0.1
