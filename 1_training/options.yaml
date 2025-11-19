@@ -2,9 +2,15 @@ seed: 42
 
 architecture:
   name: pet
+  model:
+    num_attention_layers: 1
+    d_pet: 32
+    d_node: 128
+    d_head: 32
+    d_feedforward: 64
   training:
-    batch_size: 10
-    num_epochs: 1000
+    batch_size: 1
+    num_epochs: 100
 
 training_set:
   systems:

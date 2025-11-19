@@ -1,5 +1,5 @@
-import ase.build
 import ase.io
+import ase.build
 from ase.calculators.emt import EMT
 
 calculator = EMT()
@@ -16,5 +16,5 @@ for i in range(1000):
     s.calc = None
     structures.append(s)
 
-ase.io.write("dataset.xyz", structures[:100])
-ase.io.write("evaluation.xyz", structures[100:])
+ase.io.write("dataset.xyz", structures[:10])
+ase.io.write("evaluation.xyz", structures[10:])

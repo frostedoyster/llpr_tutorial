@@ -4,7 +4,7 @@ architecture:
   name: llpr
   training:
     model_checkpoint: model.ckpt
-    batch_size: 5
+    batch_size: 1
 
 training_set:
   systems:
