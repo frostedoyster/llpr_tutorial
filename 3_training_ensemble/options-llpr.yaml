@@ -19,4 +19,3 @@ training_set:
       unit: eV
 
 validation_set: 0.2
-test_set: 0.0
