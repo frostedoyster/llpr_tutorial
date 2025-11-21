@@ -1,16 +1,13 @@
 seed: 42
 
 architecture:
-  name: pet
+  name: llpr
   model:
-    num_attention_layers: 1
-    d_pet: 32
-    d_node: 128
-    d_head: 32
-    d_feedforward: 64
+    num_ensemble_members: {"energy": 64}  # optional
   training:
+    model_checkpoint: model.ckpt
     batch_size: 10
-    num_epochs: 100
+    num_epochs: 20  # activates training of the ensemble
 
 training_set:
   systems:
@@ -22,3 +19,4 @@ training_set:
       unit: eV
 
 validation_set: 0.2
+test_set: 0.0

@@ -5,10 +5,8 @@ architecture:
   training:
     finetune:
       read_from: pet-mad-v1.0.2.ckpt
-      method: full
-    learning_rate: 2e-5
     batch_size: 10
-    num_epochs: 100
+    num_epochs: 10
 
 training_set:
   systems:
@@ -19,5 +17,5 @@ training_set:
       key: energy
       unit: eV
 
-validation_set: 0.1
-test_set: 0.1
+validation_set: 0.2
+test_set: 0.0

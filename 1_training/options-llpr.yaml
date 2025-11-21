@@ -2,9 +2,11 @@ seed: 42
 
 architecture:
   name: llpr
+  model:
+    num_ensemble_members: {"energy": 64}  # optional
   training:
     model_checkpoint: model.ckpt
-    batch_size: 1
+    batch_size: 10
 
 training_set:
   systems:
@@ -15,5 +17,5 @@ training_set:
       key: energy
       unit: eV
 
-validation_set: 0.1
-test_set: 0.1
+validation_set: 0.2
+test_set: 0.0
